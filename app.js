@@ -3,6 +3,10 @@ import cors from 'cors'
 import cookieParser from 'cookie-parser'
 import { connectDB } from './config/index.js'
 import router from './routes/api.routes.js'
+import dotenv from 'dotenv'
+dotenv.config({
+    path: './.env'
+})
 connectDB()
 const app=express()
 app.use(cors())
